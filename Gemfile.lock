@@ -1,4 +1,21 @@
 GIT
+  remote: https://github.com/kaminari/kaminari
+  revision: f89f139065f42a2993d617cfe4620a64eafad307
+  specs:
+    kaminari (1.0.1)
+      activesupport (>= 4.1.0)
+      kaminari-actionview (= 1.0.1)
+      kaminari-activerecord (= 1.0.1)
+      kaminari-core (= 1.0.1)
+    kaminari-actionview (1.0.1)
+      actionview
+      kaminari-core (= 1.0.1)
+    kaminari-activerecord (1.0.1)
+      activerecord
+      kaminari-core (= 1.0.1)
+    kaminari-core (1.0.1)
+
+GIT
   remote: https://github.com/nusound/nusound_view_tool
   revision: 26492a2bba8277a748600c7a51e1f574b0507fd9
   specs:
@@ -53,6 +70,10 @@ GEM
       autoprefixer-rails (>= 6.0.3)
       popper_js (~> 1.11.1)
       sass (>= 3.4.19)
+    bootstrap4-kaminari-views (1.0.0)
+      kaminari (>= 0.13)
+      rails (>= 3.1)
+    bootstrap_form (2.7.0)
     builder (3.2.3)
     byebug (9.1.0)
     coderay (1.1.2)
@@ -73,6 +94,8 @@ GEM
     erubi (1.6.1)
     execjs (2.7.0)
     ffi (1.9.18)
+    font-awesome-rails (4.7.0.2)
+      railties (>= 3.2, < 5.2)
     friendly_id (5.1.0)
       activerecord (>= 4.0.0)
     globalid (0.4.0)
@@ -200,12 +223,16 @@ PLATFORMS
 
 DEPENDENCIES
   bootstrap (~> 4.0.0.beta)
+  bootstrap4-kaminari-views
+  bootstrap_form
   byebug
   coffee-rails (~> 4.2)
   devise (~> 4.3)
+  font-awesome-rails (~> 4.7, >= 4.7.0.2)
   friendly_id (~> 5.1.0)
   jbuilder (~> 2.5)
   jquery-rails
+  kaminari!
   listen (>= 3.0.5, < 3.2)
   nusound_view_tool!
   petergate (~> 1.7, >= 1.7.5)
@@ -222,4 +249,4 @@ DEPENDENCIES
   web-console (>= 3.3.0)
 
 BUNDLED WITH
-   1.15.4
+   1.16.0.pre.2
