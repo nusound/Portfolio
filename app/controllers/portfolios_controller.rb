@@ -3,8 +3,8 @@ class PortfoliosController < ApplicationController
   layout "portfolio"
   access all: [:show, :index, :angular], user: {except: [:destroy, :new, :create, :update, :edit]}, site_admin: :all
 
-  def index 
-    @portfolio_items = Portfolio.all
+  def index
+    @portfolio_items = Portfolio.by_position
   end
 
   def angular
@@ -29,7 +29,7 @@ class PortfoliosController < ApplicationController
       end
     end
 
-  def edit   
+  def edit
   end
 
   def update
@@ -42,11 +42,11 @@ class PortfoliosController < ApplicationController
     end
   end
 
-  def show	
+  def show
   end
 
   def destroy
-  	# Perform the lookout  	
+  	# Perform the lookout
   	# Destroy/delete the record
     @portfolio_item.destroy
 
@@ -59,9 +59,9 @@ class PortfoliosController < ApplicationController
   private
 
   def portfolio_params
-    params.require(:portfolio).permit(:title, 
+    params.require(:portfolio).permit(:title,
                                       :subtitle,
-                                      :body, 
+                                      :body,
                                       technologies_attributes: [:name]
                                       )
   end
