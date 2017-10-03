@@ -223,7 +223,7 @@ body {
 
 .app-card-container {
   color: black;
-  text-align: right;
+  text-align: left;
 }
 
 .app-card-container > .card {
@@ -236,4 +236,9 @@ body {
 
 .app-card-container a {
   color: gray;
+}
+
+.card-block {
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
